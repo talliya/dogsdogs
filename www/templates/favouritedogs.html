@@ -1,0 +1,34 @@
+<ion-view style="" class=" " id="page9" title="Favourite dogs">
+    <ion-content class="has-header" padding="true">
+
+      <div>
+        <p>Favourite dogs: <b>  {{get_qty()}} </b>  
+          <hr>
+        </p>
+      </div>
+
+      <div ng-repeat="item in cart"   >
+        <div class="list card" >
+          <div style="min-height: 30px;" class="item item-divider">{{item.item_name}} </div>
+          <div class="item item-body" >
+
+            <img ng-src="{{'img/fk/'+ item.item_image +'.jpg'}}" width="100%" height="auto" style="box-shadow: none;">
+            <form class="list"></form>
+            <div>
+              <p>
+                {{item.item_name}} <br/>
+                Price: <strong>  {{ item.item_price  }}</strong>
+              </p>
+            </div>
+            <div class="button-bar" style="box-shadow: none;">
+              <button ng-click="removeFromCart(item.$id)" class="button button-assertive button-block button-small icon ion-android-delete" ></button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </ion-content>
+</ion-view>
